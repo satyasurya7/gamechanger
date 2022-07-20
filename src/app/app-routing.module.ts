@@ -15,9 +15,10 @@ const routes: Routes = [
   {component: ContactComponent, path:'contact'},
   {component: CompaniesComponent, path: 'companies'},
   {component: GindividualsComponent, path:'gindividuals'},
-  {component:HomeComponent, path:'home'},
-  {component:IndividualsComponent, path:'individuals'},
-  {component:OrganizationsComponent, path:'organizations'}
+  {component: HomeComponent, path:'home'},
+  {component: IndividualsComponent, path:'individuals'},
+  {component: OrganizationsComponent, path:'organizations'},
+  {component: HomeComponent, path:'**'}
 ];
 
 @NgModule({
