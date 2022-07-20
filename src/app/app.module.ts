@@ -3,12 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppAboutComponent } from './app-about/app-about.component';
+import { TopicsComponent } from './topics/topics.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { IndividualsComponent } from './individuals/individuals.component';
+import { GindividualsComponent } from './gindividuals/gindividuals.component';
+import { OrganizationsComponent } from './organizations/organizations.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppAboutComponent
+    TopicsComponent,
+    HomeComponent,
+    AboutComponent,
+    IndividualsComponent,
+    GindividualsComponent,
+    OrganizationsComponent,
+    CompaniesComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
