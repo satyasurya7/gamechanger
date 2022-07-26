@@ -1,4 +1,5 @@
-<html>
+<html lang="en">
+  <head>
   <title>Game Changer Test</title>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +10,23 @@
     body {font-family: "Lato", sans-serif;}
     .mySlides {display:none}
     </style>
-    
-    <!-- Navbar -->
-    <div class="w3-top w3-center">
-      <div class="w3-bar w3-white">
-          <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+      </script>
+  </head>
+  <body>
+        <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
           <a routerLink="home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
           <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">Categories <i class="fa fa-caret-down"></i></button>     
@@ -28,6 +41,13 @@
           <a routerLink="topics" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOPICS</a>
           <a routerLink="contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
       </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      </div>
+      <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin: top 4px;">
+        <a routerLink="about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+        <a routerLink="topics" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOPICS</a>
+        <a hrouterLinkref="contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a> 
       </div>
 <router-outlet></router-outlet>
+</body>
 </html>
